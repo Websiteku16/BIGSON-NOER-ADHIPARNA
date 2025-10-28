@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio BIGSON NOER ADHIPARNA</title>
+  <meta name="description" content="Portofolio BIGSON NOER ADHIPARNA - Pengolah Data Dan Informasi">
+  <link rel="icon" href="gambar/profile.png" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0c0f14;
+      color: #e5e5e5;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      padding: 15px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #00aaff;
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a {
+      color: #aaa;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00aaff;
+    }
+
+    .menu-toggle {
+      display: none;
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding-top: 100px;
+      background: linear-gradient(135deg, #0c0f14 50%, #0a0c10 100%);
+    }
+
+    .hero-image {
+      flex: 1 1 40%;
+      text-align: center;
+      animation: fadeInLeft 1.2s ease;
+    }
+
+    .hero-image img {
+      max-width: 320px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,170,255,0.3);
+      transition: 0.4s;
+    }
+
+    .hero-image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(0,170,255,0.5);
+    }
+
+    .hero-text {
+      flex: 1 1 50%;
+      padding: 20px 40px;
+      animation: fadeInRight 1.2s ease;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .hero-text h1 span {
+      color: #00aaff;
+    }
+
+    .hero-text h2 {
+      color: #b0b0b0;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      color: #cfcfcf;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .address {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .social-links a {
+      color: #00aaff;
+      font-size: 1.3rem;
+      margin-right: 10px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00aaff;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      margin-right: 10px;
+    }
+
+    .btn:hover {
+      background: #0088cc;
+    }
+
+    .btn-outline {
+      border: 1px solid #00aaff;
+      color: #00aaff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: #00aaff;
+      color: #fff;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      background: #11161c;
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 50px;
+      color: #fff;
+    }
+
+    .section-title span {
+      color: #00aaff;
+    }
+
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-around;
+      gap: 40px;
+    }
+
+    .about-card {
+      background: #0e1319;
+      border: 1px solid #1b2634;
+      border-left: 4px solid #00aaff;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 400px;
+      box-shadow: 0 0 20px rgba(0,170,255,0.1);
+      transition: 0.3s;
+    }
+
+    .about-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(0,170,255,0.25);
+    }
+
+    .about-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* EXPERIENCE SECTION */
+    .experience {
+      padding: 100px 0;
+      background: #0b0f14;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 25px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .exp-card {
+      background: #141b23;
+      border-left: 4px solid #00aaff;
+      padding: 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .exp-card:hover {
+      background: #1a242f;
+    }
+
+    .exp-card h3 {
+      color: #00aaff;
+      margin-bottom: 8px;
+    }
+
+    .exp-card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* CONTACT SECTION */
+    .contact {
+      background: #10151c;
+      padding: 100px 0;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: #1a1f26;
+      border: 1px solid #22303f;
+      padding: 10px;
+      color: #fff;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .contact-form button {
+      background: #00aaff;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: #0088cc;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0b0e12;
+      color: #888;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        padding: 20px;
+      }
+
+      .hero-image img {
+        max-width: 240px;
+        margin-bottom: 20px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        border-radius: 8px;
+        padding: 15px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">BIGSON NOER ADHIPARNA</div>
+      <nav class="nav-links">
+        <a href="#home" class="active">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-image">
+      <img src="gambar/profile.jpg" alt="Foto Agung Dwi Wijayanto">
+    </div>
+    <div class="hero-text">
+      <h1>Halo, Saya <span>BIGSON NOER ADHIPARNA</span></h1>
+      <h2>Pengolah Data Dan Informasi</h2>
+      <p>Saya Bekerja Disebuah Dinas Pemerintahan Kota Blitar Yaitu Tepatnya Di Dispendukcapil Kota Blitar.Dalam sehari hari saya melayani kepengurusan dokumen administrasi kependudukan yang dibutuhkan oleh masyarakat. Contonya seperti Kartu Keluarga, Akta Kelahiran, Akta Kematian, Surat Pindah Dan Kartu Identitas Anak. Selain melayanai masyrakat dikantor juga melakukan pelayanan keliling ke sekolahan maupun kerumah-rumah untuk pelyanan perekaman E-KTP. 
+</p>
+      <div class="address"><i class="fas fa-map-marker-alt"></i> Lokasi Jalan Kenari No.66 Sananwetan Kota Blitar.</div>
+      
+      <a href="#about" class="btn">Tentang Saya</a>
+      <a href="#contact" class="btn-outline">Hubungi Saya</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">Tentang <span>Saya</span></h2>
+      <div class="about-content">
+        <div class="about-card">
+          <p>Sebelum menjadi Seorang ASN pada tahun 2020, saya pernah menjadi seorang konten kreator yang befokus pada konten kuliner dan tempat wisata. Awalnya saya memulai membuat konten video dengan platform instragam. Fokus daerah atau kota yang saya buat konten adalah sebuah Kabupaten Nganjuk. Hal itu saya lakukan karena untuk mengisi waktu luang karena menunggu waktu tes CPNS ketika harus ditunda karena viurs covid.</p>
+        </div>
+        <div class="about-card">
+          <p> Alhamdulillah selama waktu covid itu banyak orang yang menonton videoku, mungkin karena banyak orang yang bosen dirumah dan akhrinya banyak orang yang mengabiskan waktunya dengan bermain medsos.Walapun begitu ternyata pada tahun 2020 akhir, Tuhan memberikan rezeki dan jalan untuk bekerja menjadi seorang ASN.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- EXPERIENCE -->
+<section class="experience" id="experience">
+  <div class="container">
+    <h2 class="section-title">Pengalaman <span>Saya</span></h2>
+    <div class="timeline">
+
+      <div class="exp-card">
+        <h3>Konten Kreator</h3>
+        <p>Sebelum menjadi ASN, saya aktif sebagai konten kreator yang membuat video seputar wisata, kuliner, berita lokal, dan budaya. Fokus utama saya adalah menampilkan potensi daerah Kabupaten Nganjuk melalui platform Instagram. Dari kegiatan ini, saya belajar tentang riset lokasi, pengambilan gambar, dan penyuntingan video untuk membangun konten yang menarik dan informatif.</p>
+      </div>
+
+      <div class="exp-card">
+        <h3>ASN</h3>
+        <p>Pada akhir tahun 2020, saya resmi menjadi Aparatur Sipil Negara dan bertugas sebagai Back Office di Dinas Kependudukan dan Catatan Sipil (Dispendukcapil) Kota Blitar. Saya berperan dalam pengelolaan data dan informasi administrasi kependudukan, serta membantu pelayanan masyarakat dalam pengurusan dokumen penting seperti Kartu Keluarga, Akta Kelahiran, dan KTP elektronik.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Hubungi <span>Saya</span></h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Nama Lengkap" required>
+        <input type="email" placeholder="Alamat Email" required>
+        <input type="text" placeholder="Subjek" required>
+        <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+        <button type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 BIGSON NOER ADHIPARNA Semua hak dilindungi.</p>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
+  </script>
+</body>
+</html>
